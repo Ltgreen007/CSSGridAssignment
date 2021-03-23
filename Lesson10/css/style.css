@@ -1,0 +1,107 @@
+/*
+COLOR PALETTE
+https://coolors.co/21015d-f7fff7-ff0074-5d5179-0a0a0a
+#21015D - persian indigo - deep blue
+#F7FFF7 - almost white
+#FF0074 - bright pink
+#5D5179 - purple navy
+#0A0A0A - rich black
+*/
+
+
+/* Global styles
+------------------------------------*/
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #F7FFF7;
+  color: #0A0A0A;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+a:hover {
+  text-decoration: none;
+}
+h1 {
+  font-size: 50px;
+  line-height: 1;
+}
+h2 {
+  font-size: 25px;
+}
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Grid styles
+------------------------------------*/
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 20vw;
+  background: #21015D;
+  text-align: center;
+  padding: 20px;
+} 
+
+.sidebar a {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  color: #F7FFF7;
+  font-size: 15px;
+  padding: 24px 14px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #FF0074;
+}
+
+.grid-parent {
+  display: grid;
+  grid-template-columns: 20vw auto;
+  grid-auto-rows: 100px 300px;
+  grid-gap: 10px;    
+}
+
+.gallery-container {
+  grid-column-start: 2;
+  padding: 20px;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.gallery-item .image {
+  width: 100;
+  height: 100;
+  overflow: hidden;
+}
+
+.gallery-item .image img {
+  width: 100%;
+  height: 100;
+  object-fit: cover;
+  object-position: 50% 50%;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+
+.gallery-item:hover .image img{
+transform: scale (1.5);
+}
+
